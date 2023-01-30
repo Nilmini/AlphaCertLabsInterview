@@ -4,7 +4,6 @@ using System.Threading.Tasks;
 using CanWeFixItApi.Constants;
 using CanWeFixItApi.Models;
 using CanWeFixItService;
-using CanWeFixItService.Models;
 using CanWeFixItService.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -12,22 +11,22 @@ using Microsoft.Extensions.Logging;
 namespace CanWeFixItApi.Controllers
 {
     /// <summary>
-    /// Controller class MarketDataController
-    /// Url path : ~/v1/marketdata
+    /// Controller class ValuationController
+    /// Url path : ~/v1/valuations
     /// </summary>
     [ApiController]
-    [Route("v1/marketdata")]
-    public class MarketDataController : ControllerBase
+    [Route("v1/valuations")]
+    public class ValuationController : ControllerBase
     {
         private readonly IMarketDataService _marketDataService;
         private readonly ILogger _logger;
 
         /// <summary>
-        /// Constructor of the IMarketDataService
+        /// Constructor of the ValuationController
         /// </summary>
         /// <param name="marketDataService"> Instance of IMarketDataService</param>
         /// <param name="logger"> Instance of Logger</param>
-        public MarketDataController(IMarketDataService marketDataService, ILogger<MarketDataController> logger)
+        public ValuationController(IMarketDataService marketDataService, ILogger<ValuationController> logger)
         {
             _marketDataService = marketDataService;
             _logger = logger;
@@ -35,18 +34,18 @@ namespace CanWeFixItApi.Controllers
 
         /// <summary>
         /// [GET]
-        /// Get active MarketData which has sedol
+        /// Get market data valuation 
         /// </summary>
         /// <returns>If success return OK response, else return Internal server error</returns>
-        public async Task<ActionResult<IEnumerable<MarketDataDto>>> Get()
+        public async Task<ActionResult<IEnumerable<MarketValuationDto>>> Get()
         {
             try
             {
-                _logger.LogInformation("MarketDataController.Get() called.");
+                _logger.LogInformation("ValuationController.Get() called.");
 
-                return Ok(_marketDataService.getActiveMarketDataWithSedol());
+                return Ok(_marketDataService.getActiveMarketDataValuation());
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 _logger.LogError("Message: " + ex.Message + Environment.NewLine + "Stack Trace: " + ex.StackTrace.ToString());
 
@@ -55,3 +54,4 @@ namespace CanWeFixItApi.Controllers
         }
     }
 }
+

@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
+using Serilog;
 
 namespace CanWeFixItApi
 {
@@ -7,6 +8,8 @@ namespace CanWeFixItApi
     {
         public static void Main(string[] args)
         {
+            Log.Logger = new LoggerConfiguration().CreateLogger();
+
             CreateHostBuilder(args).Build().Run();
         }
 
@@ -16,6 +19,9 @@ namespace CanWeFixItApi
                 {
                     webBuilder.UseStartup<Startup>();
                     webBuilder.UseUrls("http://localhost:5010");
-                });
+
+                })
+                .UseSerilog((hostingContext, loggerConfiguration) =>
+                            loggerConfiguration.ReadFrom.Configuration(hostingContext.Configuration));
     }
 }

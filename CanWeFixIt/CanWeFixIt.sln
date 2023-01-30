@@ -1,8 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CanWeFixItApi", "CanWeFixItApi\CanWeFixItApi.csproj", "{F5BE51F2-A6FD-4147-824E-7A2E3DD6984D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CanWeFixItService", "CanWeFixItService\CanWeFixItService.csproj", "{BB862D26-613C-4D09-A150-92F1D82AA77F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CanWeFixItRepository", "CanWeFixItRepository\CanWeFixItRepository.csproj", "{B71C9C08-DB86-43B1-A4CF-59A5F7FEFA48}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CanWeFixItService.Tests", "CanWeFixItService.Tests\CanWeFixItService.Tests.csproj", "{DABDEC6B-9D4B-484C-BB1A-C692A6131FBF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CanWeFixItRepository.Tests", "CanWeFixItRepository.Tests\CanWeFixItRepository.Tests.csproj", "{785ECA4B-095B-4ADD-AA59-C61BE0678285}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +25,17 @@ Global
 		{BB862D26-613C-4D09-A150-92F1D82AA77F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB862D26-613C-4D09-A150-92F1D82AA77F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB862D26-613C-4D09-A150-92F1D82AA77F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B71C9C08-DB86-43B1-A4CF-59A5F7FEFA48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B71C9C08-DB86-43B1-A4CF-59A5F7FEFA48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B71C9C08-DB86-43B1-A4CF-59A5F7FEFA48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B71C9C08-DB86-43B1-A4CF-59A5F7FEFA48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DABDEC6B-9D4B-484C-BB1A-C692A6131FBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DABDEC6B-9D4B-484C-BB1A-C692A6131FBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DABDEC6B-9D4B-484C-BB1A-C692A6131FBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DABDEC6B-9D4B-484C-BB1A-C692A6131FBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{785ECA4B-095B-4ADD-AA59-C61BE0678285}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{785ECA4B-095B-4ADD-AA59-C61BE0678285}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{785ECA4B-095B-4ADD-AA59-C61BE0678285}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{785ECA4B-095B-4ADD-AA59-C61BE0678285}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

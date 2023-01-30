@@ -6,6 +6,27 @@
 
     <ItemGroup>
         <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="5.0.17" />
+        <PackageReference Include="Serilog.AspNetCore" Version="6.1.0" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\CanWeFixItService\CanWeFixItService.csproj">
+        <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+      </ProjectReference>
+    </ItemGroup>
+    <ItemGroup>
+      <None Remove="Microsoft.EntityFrameworkCore.InMemory" />
+      <None Remove="Middleware\" />
+      <None Remove="Serilog" />
+      <None Remove="Serilog.Extensions.Logging" />
+      <None Remove="Serilog.AspNetCore" />
+      <None Remove="Models\" />
+      <None Remove="Constants\" />
+    </ItemGroup>
+    <ItemGroup>
+      <Folder Include="Middleware\" />
+      <Folder Include="Models\" />
+      <Folder Include="Constants\" />
+    </ItemGroup>
 </Project>
